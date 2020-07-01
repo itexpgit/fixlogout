@@ -66,7 +66,7 @@
             <artifactId>cucumber-reporting</artifactId>
             <version>1.0.0</version>
         </dependency>
-
+        
         </dependencies>
      
      <pluginRepositories>
@@ -95,4 +95,33 @@
         </snapshots>
     </repository>
 </repositories>
+
+<reporting>
+        <plugins>
+            <!-- Normally, we take off the dependency report, saves time. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+                </configuration>
+            </plugin>
+
+	 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </reporting>
+
 </project>
