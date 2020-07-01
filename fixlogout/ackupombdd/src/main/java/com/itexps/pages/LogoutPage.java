@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LogoutPage extends BaseClass {
     
     //Page Factory
-    @FindBy(xpath = "//*[@id=\'navbar']/ul[2]/li[6]/a")
+    @FindBy(xpath = "//b[@class='caret']")
     private WebElement acku;
     
     @FindBy(xpath = "//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")
