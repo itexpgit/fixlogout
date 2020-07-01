@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LogoutPage extends BaseClass {
     
     //Page Factory
-    @FindBy(xpath = "//b[@class='caret']")
+    @FindBy(xpath = "//*[@id=\'navbar']/ul[2]/li[6]/a")
     private WebElement acku;
     
     @FindBy(xpath = "//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")
@@ -33,11 +33,11 @@ public class LogoutPage extends BaseClass {
         }
     
     //Actions
-    public void LogoutPage() {
+    public void LogoutPage() throws InterruptedException {
         acku.click();
-        //WebDriverWait wait = new WebDriverWait(driver, 15);
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")));
-        //logout.click();
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")));
+        logout.click();
         driver.close();
         driver.quit();
         
