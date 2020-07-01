@@ -35,9 +35,9 @@ public class LogoutPage extends BaseClass {
     //Actions
     public void LogoutPage() {
         acku.click();
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")));
-        logout.click();
+        //WebDriverWait wait = new WebDriverWait(driver, 15);
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")));
+        //logout.click();
         driver.close();
         driver.quit();
         
